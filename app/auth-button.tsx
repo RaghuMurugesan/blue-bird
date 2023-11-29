@@ -2,25 +2,24 @@
 
 import { Database } from "@/types/supabase";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { useRouter } from "next/navigation";
 
 export default function AuthButton() {
     const supabase = createClientComponentClient<Database>();
+    const router = useRouter();
 
     const handleSignIn = async () => {
-        console.log("Login button click");
         await supabase.auth.signInWithOAuth({
-            provider: 'github',
+            provider: "github",
             options: {
                 redirectTo: `${location.origin}/auth/callback`,
-            }
+            },
         });
     };
 
     const handleSignOut = async () => {
-        console.log("Login button click");
-        await supabase.auth.signOut({
-
-        });
+        await supabase.auth.signOut();
+        router.refresh();
     };
 
     return (
