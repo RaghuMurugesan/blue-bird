@@ -2,7 +2,6 @@ import { Session, createServerComponentClient } from "@supabase/auth-helpers-nex
 import AuthButtonClient from "../auth-button-client";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import { Database } from "@/types/supabase";
 
 export default async function Login() {
     const supabase = createServerComponentClient<Database>({ cookies });
