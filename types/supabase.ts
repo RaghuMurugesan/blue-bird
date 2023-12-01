@@ -60,7 +60,7 @@ export interface Database {
           {
             foreignKeyName: "tweets_user_id_fkey"
             columns: ["user_id"]
-            referencedRelation: "users"
+            referencedRelation: "profiles"
             referencedColumns: ["id"]
           }
         ]
