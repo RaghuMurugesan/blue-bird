@@ -27,9 +27,9 @@ AS $function$begin
   insert into public.profiles (id, name, username, avatar_url)
   values (
     new.id,
-    new.raw_user_meta_data->'name',
-    new.raw_user_meta_data->'user_name',
-    new.raw_user_meta_data->'avatar_url'
+    new.raw_user_meta_data->>'name',
+    new.raw_user_meta_data->>'user_name',
+    new.raw_user_meta_data->>'avatar_url'
   );
   return new;
 end;$function$
