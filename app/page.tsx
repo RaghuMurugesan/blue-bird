@@ -2,7 +2,7 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { Database } from "../types/supabase";
 import AuthButtonServer from "./auth-button-server";
-import RaghuTest10sBlockingComponent from "@/components/raghu-test-10sec-blocking-component";
+import NewTweet from "@/components/new-tweet";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
@@ -19,7 +19,8 @@ export default async function Home() {
   return (
   <>
     <AuthButtonServer />
-     <pre>{JSON.stringify(tweets, null, 2)}</pre>
+    <NewTweet />
+    <pre>{JSON.stringify(tweets, null, 2)}</pre>
   </>
   );
 }
