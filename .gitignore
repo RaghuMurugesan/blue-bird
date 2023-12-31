@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#temp files
+temp_data.sql
+temp_full.sql
+temp.sql
+components/raghu-test-10sec-blocking-component.tsx
