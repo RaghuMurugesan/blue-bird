@@ -1,8 +1,8 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import { Database } from "../types/supabase";
+import { Database } from "./types/supabase";
 import AuthButtonServer from "./auth-button-server";
-import NewTweet from "@/components/new-tweet";
+import NewTweet from "@/app/components/new-tweet";
 import { redirect } from "next/navigation";
 import Likes from "./likes";
 
@@ -26,7 +26,6 @@ export default async function Home() {
     likes: tweet.likes.length,
   })) ?? [];
 
-  console.log(tweets);
   return (
   <>
     <AuthButtonServer />

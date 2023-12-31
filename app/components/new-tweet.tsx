@@ -16,7 +16,6 @@ export default function NewTweet() {
         */
         "use server";
         const title = String(formData.get('title'));
-        console.log("Tweet Submitted " + title);
 
         const supabase = createServerActionClient<Database>( { cookies });
         const {data : { user }} = await supabase.auth.getUser();
