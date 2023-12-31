@@ -1,10 +1,9 @@
 'use client';
 
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
 import { useRouter } from "next/navigation";
 
-export default function Likes({tweet}: {tweet: any}) {
+export default function Likes({tweet}: {tweet: TweetWithAuthor}) {
     const router = useRouter();
 
     const handleLike = async () => {
